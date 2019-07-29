@@ -24,16 +24,16 @@ const firstNames = [
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
-  allItems.forEach(item => {
-    for (let itemCount in itemsToCount) {
-      if (itemsToCount.hasOwnProperty(itemCount)) {
-        if (itemCount === item) {
-          // console.log(item);
-          return true;
-        }
-      }
-    }
-  });
+  // allItems.forEach(item => {
+  //   for (let itemCount in itemsToCount) {
+  //     if (itemsToCount.hasOwnProperty(itemCount)) {
+  //       if (itemCount === item) {
+  //         // console.log(item);
+  //         return item;
+  //       }
+  //     }
+  //   }
+  // });
 
   for (const item of allItems) {
     // Add an if condition to only increment our count in results if the item is found in the itemsToCount object.

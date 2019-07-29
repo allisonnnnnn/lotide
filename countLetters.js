@@ -1,7 +1,15 @@
-// const assertEqual = function(actual, expected) {
+const assertEqual = function(actual, expected) {
+  if (actual === expected) {
+    console.log(`✅Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`🛑Assertion Failed: ${actual} !== ${expected}`);
+  }
+};
 
 const countLetters = function(string) {
   let result = {};
+
+  string = string.replace(/\s/g, "");
 
   for (char of string) {
     let blank = " ";
@@ -9,8 +17,6 @@ const countLetters = function(string) {
       result[char] += 1;
 
       // *****string[char] = value; !!!!
-    } else if (char === blank) {
-      delete string[char];
     } else {
       result[char] = 1;
     }
