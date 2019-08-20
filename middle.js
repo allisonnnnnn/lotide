@@ -32,7 +32,7 @@ const middle = function(arr) {
     return [];
   } else if (arr.length % 2 === 0) {
     return [arr[mid - 1], arr[mid]];
-  } else if (arr.length % 2 !== 0) {
+  } else  {
     return [arr[mid]];
   }
 };
