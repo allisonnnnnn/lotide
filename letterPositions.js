@@ -9,8 +9,7 @@ const eqArrays = function(arr1, arr2) {
     } else if (arr1[i] !== arr2[i]) {
       return false;
     }
-    // not array both use === compare
-    // one array one not, return false no need to compare
+
   }
   return true;
 };
@@ -28,8 +27,7 @@ const letterPositions = function(sentence) {
   sentence = sentence.split(" ").join("");
 
   for (let i = 0; i < sentence.length; i++) {
-    // console.log(sentence[i]);
-    // results += `${sentence[i]}:${[i]}`;
+  
 
     if (results[sentence[i]]) {
       results[sentence[i]].push(i);
