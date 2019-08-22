@@ -24,16 +24,15 @@ const assertArraysEqual = function(arr1, arr2) {
 };
 
 const takeUntil = function(array, callback) {
-  const results = [];
+ let result = [];
   for (let item of array) {
-    // keep add the truthy elements into the array, when hit the wrong one, and return
-    //??? what is the difference between ! at the beginning and !==
-    if (!item === callback(item)) {
-      results.push(item);
+    if (callback(item) === false) {
+      result.push(item);
     } else {
-      return results;
+      return result;
     }
   }
+ }
 
   //??? why we should not return result here?
   // return results;
