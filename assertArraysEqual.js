@@ -19,9 +19,9 @@ const eqArrays = require("./eqArray");
 
 const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1, arr2)) {
-    console.log("✌️ pass!");
+    console.log("✅ true!");
   } else {
-    console.log("💩 wrong");
+    console.log("🔴 false");
   }
 };
 

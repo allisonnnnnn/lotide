@@ -13,7 +13,7 @@ const eqObjects = function(object1, object2) {
     return false;
   }
 
-  for (key of obj1Keys) {
+  for (let key of obj1Keys) {
     if (typeof object1[key] !== "object" && typeof object2[key] !== "object") {
       if (object1[key] !== object2[key]) return false;
     } else if (
