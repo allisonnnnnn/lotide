@@ -1,12 +1,4 @@
-const assertEqual = require("./assertEqual");
-
-// const assertEqual = function(actual, expected) {
-//   if (actual === expected) {
-//     console.log(`✅Assertion Passed: ${actual} === ${expected}`);
-//   } else {
-//     console.log(`🛑Assertion Failed: ${actual} !== ${expected}`);
-//   }
-// };
+// JavaScript doesn't allow the use of === or == to compare two arrays
 
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) return false;
@@ -19,11 +11,10 @@ const eqArrays = function(arr1, arr2) {
     } else if (arr1[i] !== arr2[i]) {
       return false;
     }
-    // not array both use === compare
-    // one array one not, return false no need to compare
+
   }
   return true;
 };
 
-// assertEqual(eqArrays([1, 2, 3, [4, 5]], [1, 2, 3, [4, 6]]), true);
+
 module.exports = eqArrays;

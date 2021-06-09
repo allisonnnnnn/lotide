@@ -10,5 +10,7 @@ const without = function(source, remove) {
   return result;
 };
 
+
+// TEST
 assertArraysEqual(without([1, 2, 3], [1]), [2, 3]);
 
